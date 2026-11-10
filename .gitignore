@@ -1,0 +1,23 @@
+# Local builds and Vivado project state
+/build/
+/.Xil/
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/
+*.xpr
+
+# Generated bitstreams, checkpoints, logs, and simulation output
+*.bit
+*.bin
+*.dcp
+*.jou
+*.log
+*.pb
+*.rpt
+*.wdb
+xsim.dir/
+xsim.ini

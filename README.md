@@ -37,6 +37,10 @@ flowchart LR
     Scan --> Display["AN0, AN1, and segments"]
 ```
 
+[![Elaborated Vivado RTL schematic showing the adder, selector, and display multiplexer](docs/images/vivado-rtl-schematic.png)](docs/images/vivado-rtl-schematic.png)
+
+*Top-level RTL schematic captured in Vivado from the original project. The diagram above summarizes the published revision.*
+
 - [`sign_mag_adder.sv`](rtl/sign_mag_adder.sv) adds magnitudes when signs match. When signs differ, it subtracts the smaller magnitude from the larger and uses the sign of the larger operand.
 - [`sign_mag_test.sv`](rtl/sign_mag_test.sv) selects the displayed value and produces the sign pattern. [`hex_seven_seg.sv`](rtl/hex_seven_seg.sv) decodes the magnitude into an active-low segment pattern.
 - [`disp_mux.sv`](rtl/disp_mux.sv) alternates the two active-low digit enables every 65,536 cycles of the 100 MHz oscillator. Each digit refreshes at about 763 Hz. The decimal point and the other six digits stay off.
